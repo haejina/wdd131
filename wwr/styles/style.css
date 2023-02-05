@@ -1,9 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&family=Permanent+Marker&family=Rock+Salt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&family=Indie+Flower&family=Permanent+Marker&family=Rock+Salt&display=swap');
 
 .logo{
-    max-width: 10%;  
-    height: auto;  
+    width: 50px;  
     border-radius: 50%;
+    margin: auto;
     
+}
+#logo_link{
+    padding-top: 5px;
 }
 #content{
     margin: 0 auto;
@@ -11,12 +16,14 @@
 }
 #hero-msg h1{
     text-align: center;
+   
 }
 nav a{
     text-align: center;
     text-decoration: none;
     background-color:rgb(58, 75, 29);
     color:#fcfbfb;
+    padding: 25px;
 }
 nav a:hover{
     background-color: black;
@@ -37,6 +44,9 @@ main section{
 }
 body{
   background-color: #fcfbfb;
+  font-family: 'Brush Script MT', cursive;
+  margin: 0;
+  padding: 0;
 }
 header{
     background-color:rgb(58, 75, 29);
@@ -45,6 +55,10 @@ header{
     background-color:white;
     text-decoration: none;
     color: blue;
+    font-size: 18px;
+    padding: 15px 30px;
+    margin-top: 50px;
+    border-radius:5px; 
 }
 .book:hover{
     background-color:rgb(58, 75, 29);
@@ -54,6 +68,10 @@ header{
     background-color:rgb(224, 217, 116);;
     text-decoration: none;
     color: blue;
+    font-size: 18px;
+    padding: 15px 30px;
+    margin-top: 50px;
+    border-radius:5px;
 }
 
 .join:hover{
@@ -62,16 +80,24 @@ header{
 }
 .msg{
     background-color:rgb(224, 217, 116);
+    line-height: 1.5em;
+    padding: 35px;
 }
 .msg h2{
-  color: black;
+  color:black;
+  font-family: 'Indie Flower';
 }
 .msg p{
-  color: black;
+  color: black;	
+  font-family: 'Brush Script MT', cursive;
+  font-size: .8em;
+  padding-bottom: 15px;
 }
 footer{
     background-color:rgb(224, 217, 116);
     color: black;
+    padding: 25px 50px;
+    margin-top: 200px;
 }
 footer a{
     text-decoration: none;
@@ -82,16 +108,46 @@ footer a:hover{
 }
 footer p{
     font-size: 1.2em;
+    font-family: 'Indie Flower';
 }
 footer p a:hover{
     text-decoration: underline;
-}
+} 
 .home-title{
    color: black;
+   font-family: 'Brush Script MT', cursive;
+   font-size: 2em;
+   margin-top: 10px;
 }
 h4{
   color:rgb(58, 75, 29);
+  font-family: 'Rock Salt';
 }
 .icon {
     width: 80px;
+    padding-top: 10px;
+}
+h2{
+    margin: 0;
+}
+footer .social img{
+    padding-top: 15px;
+} 
+.rivers-card{
+    margin: 200px 0;
+} 
+.camping-card{
+    margin: 200px 0;
+} 
+.rapids-card{
+    margin: 200px 0;
+} 
+.card-img{
+    border:10px solid rgb(58, 75, 29);
+}
+main section img {
+    box-sizing: border-box;
+}
+.mountains{
+    margin: 200px 0;
 }
