@@ -173,7 +173,10 @@ img {
     margin-top: -300px;
     font-size: 10px;
 }
-
+.imgsize{
+    width: 350px;
+    height: 250px;
+}
 
 @media screen and (max-width: 900px) {
     #hero, .home-grid {
