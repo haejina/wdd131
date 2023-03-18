@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&family=Permanent+Marker&family=Rock+Salt&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&family=Indie+Flower&family=Permanent+Marker&family=Rock+Salt&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap');
 .logo{
     width: 80px;  
    
@@ -24,7 +26,7 @@
 nav a{
     text-align: center;
     text-decoration: none;
-    background-color:#f8ff38;
+    background-color:white;
     color:black;
     padding: 35px;
     
@@ -48,7 +50,6 @@ main section{
     background-color:#3876e7;
     
 }
-
 body{
   background-color: #fcfbfb;
   font-family: 'Brush Script MT', cursive;
@@ -57,56 +58,11 @@ body{
   font-size: 22px;
 }
 header{
-    background-color:#f8ff38;
-}
-.book{
-    background-color:rgb(58, 75, 29);
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    padding: 15px 30px;
-    margin-top: 50px;
-    border-radius:5px; 
-}
-.book:hover{
-    background-color: white;
-    color: rgb(58, 75, 29);
-} 
-.join{
-    background-color:rgb(224, 217, 116);;
-    text-decoration: none;
-    color: blue;
-    font-size: 18px;
-    padding: 15px 30px;
-    margin-top: 50px;
-    border-radius:5px;
-}
-
-.join:hover{
-    background-color:rgb(58, 75, 29);
-    color: rgb(244, 244, 28);
-}
-.msg{
-    background-color:rgb(224, 217, 116);
-    line-height: 1.5em;
-    padding: 35px;
-    grid-column: 6/10;
-    grid-row: 6/7;
-    box-shadow: 5px 5px 10px #6f7364;
-}
-.msg h2{
-  color:black;
-  font-family: 'Indie Flower';
-}
-.msg p{
-  color: black;	
-  font-family: 'Brush Script MT', cursive;
-  font-size: .8em;
-  padding-bottom: 15px;
+    background-color:white;
 }
 footer{
-    background-color:#f8ff38;
-    color: black;
+    background-color:rgb(23, 22, 22);
+    color: white;
     padding: 25px 50px;
     margin-top: 200px;
     display: flex;
@@ -115,10 +71,10 @@ footer{
 }
 footer a{
     text-decoration: none;
-    color: blue;
+    color: white;
 }
 footer a:hover{
-    color: rgb(58, 75, 29);
+    color: yellow;
 }
 footer p{
     font-size: 1.2em;
@@ -133,34 +89,9 @@ footer p a:hover{
    font-size: 2em;
    margin-top: 10px;
 }
-h4{
-  color:rgb(58, 75, 29);
-  font-family: 'Rock Salt';
-}
-.icon {
-    width: 80px;
-    padding-top: 10px;
-}
-h2{
-    margin: 0;
-}
 footer .social img{
     padding-top: 15px;
 } 
-
-main section img {
-    box-sizing: border-box;
-}
-.mountains{
-    margin: 200px 0;
-    grid-column: 2/7;
-    grid-row: 5/8;
-    width: 100%;
-    box-shadow: 5px 5px 10px #6f7364;
-}
-#hero-img{
-    width:100%;
-}
 header{
     display: grid;
     grid-template-columns: 150px auto;
@@ -169,33 +100,13 @@ nav{
     display: flex;
     justify-content: space-around;
 }
-#Hero{
-    display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-    margin-top: -100px;
-}
-#hero-box{
-    grid-column: 1/4;
-    grid-row: 1/3;
-    z-index: -1;
-}
-#hero-msg{
-    grid-column: 2/3;
-    grid-row: 1/2;
-    margin-top: 100px;
-}
-.home-grid{
-    display: grid;
-    grid-template-columns: repeat(10, 1fr)
-}
-
 #background{
     grid-column: 1/11;
     grid-row: 5/8;
 }
 #homeimg{
     width:100%;
-    height: 350px;
+    height: 450px;
     grid-column: 1/4;
     grid-row: 1/3;
     z-index: -1;
@@ -230,6 +141,39 @@ nav{
     margin-left: 150px;
     font-weight: bold;
 }
+main{
+    display: grid;
+    padding: 3rem;
+    grid-template-columns: 300px 1fr;
+    gap: 3rem;
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+    font: 500 100%/1.5 system-ui;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+#lastone{
+    margin-bottom: -200px;
+}
+#lastq{
+    margin-bottom: -200px;
+    font-family: 'Ubuntu Condensed';
+    background-color: #BCD0FD;
+    font-size: 16px;
+}
+.qformain{
+    font-size: 16px;
+    font-family: 'Ubuntu Condensed';
+    background-color: #BCD0FD
+}
+.title1{
+    margin-top: -300px;
+    font-size: 10px;
+}
+
 
 @media screen and (max-width: 900px) {
     #hero, .home-grid {
