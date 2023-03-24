@@ -157,10 +157,7 @@ nav{
 main{
     display: grid;
     grid-template-columns: 360px 1fr;
-    gap: -50px;
     margin-bottom: -200px;
-    
-    
 }
 div.gallery{
     margin: 5px;
