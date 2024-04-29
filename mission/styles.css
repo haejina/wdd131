@@ -1,0 +1,74 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.content {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    font-weight: 600;
+}
+
+
+
+.title h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 42px;
+    text-transform: uppercase;
+    letter-spacing: 3.0px;
+    margin-bottom: 10px;
+    font-weight: 549;
+}
+
+.title h2 {
+    color: #006EB6;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 4.5px;
+    margin-bottom: 50px;
+    border-bottom: 0.1px solid gray; 
+    font-weight: 580;
+}
+
+
+
+main {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+main p {
+    margin-bottom: 20px;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.list {
+    padding-left: 20px;
+    margin-left: 25px;
+    font-size: 18px;
+}
+.list li {
+    margin-bottom: 25px; 
+    font-weight: 558;
+}
+
+main em {
+    font-style: italic;
+}
+
+
+
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+}
