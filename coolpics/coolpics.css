@@ -1,4 +1,12 @@
 /* Import font */
+/* Media Query for 1000px and above */
+@media screen and (min-width: 1000px) {
+  /* Adjust the layout for wider screens */
+  header nav .menu-btn {
+    display: none; /* Hide the "Menu" button */
+  }
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
 
 /* CSS Custom Properties (Variables) */
