@@ -58,6 +58,7 @@ header nav ul {
 header nav ul li {
     margin-left: 70px;
     margin-right: 70px; /* Adjust margin between li elements */
+    margin-bottom: 20px;
 }
   
 nav ul li a::after {
@@ -70,8 +71,8 @@ nav ul li a::after {
     background-color: white; /* Set the color of the line */
 }
 header nav .title {
-    margin-top: -10px; /* Remove margin bottom from h1 */
-    margin-bottom: 10px;
+    margin-top: 10px; /* Remove margin bottom from h1 */
+    margin-bottom: 20px;
     font-size: 50px;
 }
 
@@ -90,23 +91,27 @@ main {
 .gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
+  grid-gap: 50px;
+  border: 10px solid white; /* Adjust the border thickness as needed */
 }
 
 .gallery figure {
   margin: 0;
   border: 10px solid var(--secondary-color);
-  border: 1px solid black
+ 
 }
 
 .gallery img {
   max-width: 100%;
   height: auto;
+  border: 7px solid white; /* Adjust the border thickness as needed */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Adjust shadow properties as needed */
+  display: inline-block; /* Ensures the frame only takes up space around the image */
 }
 
 main h2 {
     text-align: center;
-    margin-top: -30px;
+    margin-top: -20px;
     margin-bottom: 5px;
 }
 
@@ -118,17 +123,21 @@ footer {
     background-color: var(--primary-color);
     color: var(--secondary-color);
     text-align: center;
-    padding: 10px;
+    padding: 20px;
     max-height: 15px;
+    padding-bottom: 12px;
 }
   
 .foot {
-    font-size: 15px;
+    font-size: 14px;
+    margin-bottom: 25px;
 }
   
   /* Adjust font size to fit content within max-height */
 footer p {
-    font-size: 12px; /* Decrease font size to fit content within max-height */
+    font-size: 15px; /* Decrease font size to fit content within max-height */
     margin: 0; /* Remove any default margins to ensure the content fits properly */
-    margin-right: 700px;
+    margin-right: 720px;
 }
+
+
