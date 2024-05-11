@@ -1,8 +1,32 @@
 
+/* Styles for smaller screens */
+@media screen and (max-width: 699px) {
+  nav {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    margin-top: 0;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Existing styles for larger screens */
 @media screen and (min-width: 700px) {
   .gallery {
     grid-template-columns: 1fr 1fr;
   }
+
   header nav .menu-btn {
     display: none; /* Hide the "Menu" button */
   }
