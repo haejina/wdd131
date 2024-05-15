@@ -4,16 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cool Pics</title>
-  <link rel="stylesheet" href="coolpics.js">
   <link rel="stylesheet" href="coolpics.css">
 </head>
 <body>
   <header>
     <nav>
-      
       <h1 class="title">Cool Pics<span>📷</span></h1>
-      <h2 class="menu-btn">Menu</h2>
-      <ul>
+      <h2 class="menu-button">Menu</h2>
+      <ul id="menu-items" class="hide">
         <li><a href="#">Home</a></li>
         <li><a href="#">People</a></li>
         <li><a href="#">Places</a></li>
@@ -23,41 +21,47 @@
     </nav>
   </header>
 
+  <div class="viewer">
+    <button class="close-viewer">X</button>
+    <img src="norris-full.jpeg" alt="alt description">
+  </div>
+
   <main>
     <h2>Current Work</h2>
     <section class="gallery">
-        <figure>  
-            <img src="norris-sm.jpeg" alt="picture">
-        </figure>
-        <figure>  
-            <img src="norris-sm.jpeg" alt="picture">
-        </figure>
-        <figure>  
-            <img src="norris-sm.jpeg" alt="picture">
-        </figure>
-        <figure>  
-            <img src="norris-sm.jpeg" alt="picture">
-        </figure>
-        <figure>  
-            <img src="norris-sm.jpeg" alt="picture">
-        </figure>
-        <figure>  
-            <img src="norris-sm.jpeg" alt="picture">
-        </figure>
-        <figure>  
-            <img src="norris-sm.jpeg" alt="picture">
-        </figure>
-        <figure>  
-            <img src="norris-sm.jpeg" alt="picture">
-        </figure>
-        <figure>  
-            <img src="norris-sm.jpeg" alt="picture">
-        </figure>
+      <figure>  
+          <img src="norris-sm.jpeg" alt="picture">
+      </figure>
+      <figure>  
+          <img src="norris-sm.jpeg" alt="picture">
+      </figure>
+      <figure>  
+          <img src="norris-sm.jpeg" alt="picture">
+      </figure>
+      <figure>  
+          <img src="norris-sm.jpeg" alt="picture">
+      </figure>
+      <figure>  
+          <img src="norris-sm.jpeg" alt="picture">
+      </figure>
+      <figure>  
+          <img src="norris-sm.jpeg" alt="picture">
+      </figure>
+      <figure>  
+          <img src="norris-sm.jpeg" alt="picture">
+      </figure>
+      <figure>  
+          <img src="norris-sm.jpeg" alt="picture">
+      </figure>
+      <figure>  
+          <img src="norris-sm.jpeg" alt="picture">
+      </figure>
     </section>
   </main>
 
   <footer>
     <p class="foot">&copy; 2023 Not a real site :)</p>
   </footer>
+  <script src="coolpics.js"></script>
 </body>
 </html>
