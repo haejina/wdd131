@@ -8,21 +8,53 @@ function toggleMenu() {
 menuButton.addEventListener("click", toggleMenu);
 
 function handleResize() {
-    const menu = document.querySelector(".menu");
-    if (window.innerWidth > 1000) {
-      menu.classList.remove("hide");
-    } else {
-      menu.classList.add("hide");
-    }
+  const menu = document.getElementById("menu-items");
+  if (window.innerWidth > 1000) {
+    menu.classList.remove("hide");
+  } else {
+    menu.classList.add("hide");
   }
-  
-  handleResize();
-  window.addEventListener("resize", handleResize);
+}
+
+handleResize();
+window.addEventListener("resize", handleResize);
 
 function viewerTemplate(pic, alt) {
-    return `<div class="viewer">
-      <button class="close-viewer">X</button>
-      <img src="${pic}" alt="${alt}">
-      </div>`;
+  return `<div class="viewer">
+    <button class="close-viewer">X</button>
+    <img src="${pic}" alt="${alt}">
+  </div>`;
+}
+
+
+function closeViewer() {
+  const viewerElement = document.querySelector('.viewer');
+  if (viewerElement) {
+    viewerElement.remove();
   }
-  
+}
+
+function viewHandler(event) {
+  const clickedElement = event.target;
+
+  if (clickedElement.tagName === 'IMG') {
+    const srcParts = clickedElement.src.split('-');
+    const newSrc = `${srcParts[0]}-full.jpeg`;
+
+    const viewer = viewerTemplate(newSrc, clickedElement.alt);
+    document.body.insertAdjacentHTML('afterbegin', viewer);
+
+    const closeButton = document.querySelector('.close-viewer');
+    closeButton.addEventListener('click', closeViewer);
+  }
+}
+document.addEventListener('DOMContentLoaded', () => {
+  const gallery = document.querySelector('.gallery');
+  gallery.addEventListener('click', viewHandler);
+});
+function closeViewer() {
+  const viewerElement = document.querySelector('.viewer');
+  if (viewerElement) {
+    viewerElement.remove();
+  }
+}

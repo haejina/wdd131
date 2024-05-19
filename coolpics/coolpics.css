@@ -1,5 +1,4 @@
 /* Styles for smaller screens */
-/* Styles for smaller screens */
 @media screen and (max-width: 699px) {
   nav {
       flex-direction: row;
@@ -163,7 +162,6 @@ footer p {
     margin: 0; /* Remove any default margins to ensure the content fits properly */
     margin-right: 720px;
 }
-
 
 /* Styles for image viewer modal */
 .viewer {
