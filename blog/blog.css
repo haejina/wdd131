@@ -53,22 +53,23 @@ main {
   gap: 20px;
   padding: 20px;
 }
+
+/* Article Details Styles */
 .article-details {
   display: grid;
   text-align: right;
-  line-height: 1; /* Adjust line height to reduce the gap */
+  line-height: 1; 
   position: relative;
   border-right: 1px solid #EFC69B;
   padding-right: 15px;
 }
 
 .article-details p {
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove default padding */
+  margin: 0; 
+  padding: 0; 
 }
 
-
-/* Adjust grid-template-columns */
+/* Article Styles */
 article {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -77,29 +78,38 @@ article {
   position: relative;
 }
 
+/* Article Heading Styles */
+article h2 {
+  color: #AF1B3F; 
+  font-size: 30px; 
+}
+article figcaption {
+  color: black; 
+}
+
+article figcaption a {
+  color: #AF1B3F;
+}
+
 /* Image and Caption Styles */
 figure {
   text-align: center;
 }
 
 figure img {
-  max-width: 55%;
-  display: block;
-  margin: 0 auto;
+  max-width: 53%;
 }
 
 figcaption {
   font-style: italic;
   color: #AF1B3F;
-  font-size: 15px;
+  font-size: 17px;
   text-align: left;
+  padding-top: 23px;
+  font-weight: bold;
 }
 
-.article-content h2{
-  font-size: 27px;
-}
-
-/* Skip to content link styles */
+/* Skip to Content Link Styles */
 .skiptocontent a {
   position: absolute;
   top: -40px;
