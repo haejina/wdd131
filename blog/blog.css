@@ -4,13 +4,13 @@ body {
   color: #473144;
 }
 
-h1, h2 {
-  font-family: 'Lora', 'Impact', serif;
-}
-
 a {
   color: #AF1B3F;
   text-decoration: none;
+}
+
+h1, h2 {
+  font-family: 'Lora', 'Impact', serif;
 }
 
 /* Header Styles */
@@ -34,80 +34,85 @@ nav {
   list-style: none;
   padding: 20px;
   display: flex;
-  justify-content: flex-end; /* Aligns items to the right */
-  padding-right: 180px;
+  justify-content: flex-end;
+  padding-right: 250px;
   font-weight: bolder;
-  margin: 0 auto
+  margin: 0 auto;
 }
 
 .main-nav li {
-  margin-left: 20px; /* Adds some spacing between items */
+  margin-left: 20px;
 }
 
 /* Main Content Styles */
 main {
+  max-width: 1200px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 3fr 1fr;
   gap: 20px;
   padding: 20px;
 }
-
-.articles-container {
+.article-details {
   display: grid;
-  gap: 20px;
+  text-align: right;
+  line-height: 1; /* Adjust line height to reduce the gap */
+  position: relative;
+  border-right: 1px solid #EFC69B;
+  padding-right: 15px;
 }
 
+.article-details p {
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+
+/* Adjust grid-template-columns */
 article {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: 10px; /* Reduce the gap between columns */
+  gap: 10px;
   padding: 20px;
   position: relative;
 }
 
-.article-details {
-  display: grid;
-  gap: 10px;
-  position: relative;
-}
-
-.article-content h2 {
-  margin-top: 0;
-}
-
+/* Image and Caption Styles */
 figure {
-  margin: 0;
+  text-align: center;
+}
+
+figure img {
+  max-width: 55%;
+  display: block;
+  margin: 0 auto;
 }
 
 figcaption {
   font-style: italic;
   color: #AF1B3F;
+  font-size: 15px;
+  text-align: left;
 }
 
-/* Line between article-details and article-content */
-.article-details::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: -5px; /* Bring the line closer */
-  width: 1px;
-  height: 100%;
-  background-color: #EFC69B;
+.article-content h2{
+  font-size: 27px;
 }
+
 /* Skip to content link styles */
 .skiptocontent a {
   position: absolute;
-  top: -40px; /* Move it off screen */
+  top: -40px;
   left: 0;
   background: #000;
   color: #fff;
   padding: 10px;
-  z-index: 100; /* Ensure it is on top of other elements */
+  z-index: 100;
   text-decoration: none;
 }
 
 .skiptocontent a:focus {
-  top: 0; /* Move it back on screen when focused */
+  top: 0;
 }
 
 /* Aside Styles */
@@ -116,4 +121,5 @@ aside {
   padding: 20px;
   text-align: center;
   max-width: 170px;
+  max-height: 100%;
 }
