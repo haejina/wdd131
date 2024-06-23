@@ -6,8 +6,8 @@
   --text-dark: #333;
   --text-light: #ebebeb;
   --primary-font: Arial, Helvetica, sans-serif;
-  --secondary-font: 'Courgette', cursive;
-  --line-color: #ccc; /* Added a variable for the line color */
+  --secondary-font: 'Courgette', 'cursive';
+  --line-color: #ccc;
 }
 
 body {
@@ -27,6 +27,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #ffffff;
 }
 
 header img {
@@ -35,11 +36,9 @@ header img {
 }
 
 header h1 {
-    font-family: var(--secondary-font);
-    font-size: 55px;
-    margin: 0;
-    display: flex;
-    margin-top: 50px;
+  font-family: var(--secondary-font);
+  font-size: 55px;
+  margin: 0;
 }
 
 form {
@@ -47,7 +46,8 @@ form {
   align-items: center;
   justify-content: center;
   padding: 10px;
-  border-bottom: 1px solid var(--line-color); /* Added border to form */
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--line-color);
 }
 
 form input[type="text"] {
@@ -67,48 +67,62 @@ form button {
 }
 
 section {
-  background-color: var(--text-light);
-  padding: 10px;
-  margin: 10px;
+  background-color: #ffffff;
+  padding: 20px;
+  margin: 20px;
   border-radius: 5px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  align-items: flex-start;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border: 2px solid #000000; /* Added black border */
+}
+
+section .image {
+  flex: 1;
+  margin-right: 20px;
+}
+
+section .details {
+  flex: 2;
 }
 
 section .tags {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
+  margin-bottom: 20px;
 }
 
 section .tags span {
-  background-color: var(--secondary-color);
-  color: var(--text-light);
+  background-color: #ffffff;
+  color: var(--text-dark);
   padding: 5px 10px;
-  margin-right: 5px;
-  margin-bottom: 5px;
-  border-radius: 3px;
+  border-radius: 0;
+  font-size: 0.9em;
+  border: 1px solid var(--text-dark);
 }
 
 section h2 {
   font-family: var(--secondary-font);
-  margin-top: 10px;
-  margin-bottom: 5px;
-  text-align: center;
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-align: left;
+  color: #4a90e2;
 }
 
 section .rating {
   color: #ffd700;
-  font-size: 20px;
+  font-size: 24px;
 }
 
 section p {
-  display: none;
+  margin-top: 30px;
+  font-size: 1.2em; /* Changed from 30px to 1.2em for better scaling */
+  line-height: 1.4;
 }
 
 footer {
-  padding: 10px;
+  padding: 20px;
   text-align: center;
   font-size: 12px;
   display: flex;
@@ -126,8 +140,32 @@ footer a {
 }
 
 footer img {
-  height: 20px;
-  margin: 0 2px; /* Reduced margin */
+  height: 50px;
+  margin: 0 5px;
+}
+
+@media (max-width: 768px) {
+  section {
+    flex-direction: column;
+  }
+
+  section .image {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+
+  footer .social {
+    margin-top: 10px;
+    order: 2;
+  }
+
+  footer a {
+    order: 1;
+  }
 }
 
 @media (min-width: 768px) {
@@ -144,10 +182,6 @@ footer img {
 
   section .image {
     flex: 1;
-  }
-
-  section p {
-    display: block;
   }
 
   section .tags {
@@ -170,7 +204,10 @@ footer img {
   footer .social {
     order: 2;
   }
+
+  footer img {
+    height: 20px;
+    margin: 0 2px;
+  }
+  
 }
-
-
-
