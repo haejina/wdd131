@@ -75,13 +75,16 @@ function filterRecipes(query) {
 }
 
 function searchHandler(event) {
-  event.preventDefault();
-  const query = document.querySelector('form input[type="text"]').value;
+  event.preventDefault(); // Prevent form submission
+
+  const query = document.querySelector('form input[type="text"]').value.toLowerCase();
   const filteredRecipes = filterRecipes(query);
   renderRecipes(filteredRecipes);
 }
 
 document.querySelector('form').addEventListener('submit', searchHandler);
+
+
 
 // Initialize with a random recipe
 init();
