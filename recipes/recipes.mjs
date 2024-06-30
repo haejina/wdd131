@@ -22,17 +22,7 @@ const recipes = [
 			'1 Tbsp Chives',
 			'1/4 C Cornmeal',
 			'1 C Flour'
-		],
-		name: 'Sweet Potato Waffles',
-		prepTime: '30 Min',
-		recipeInstructions: [
-			'Add the egg yolks, oil, salt, cayenne, sugar, ginger, shallots, sweet potatoes (steam and mash before), and milk and mix well.',
-			'Next add the cornmeal, chives, and flour and baking powder',
-			'Whip the egg whites until stiff and fold in',
-			'Cook until golden brown in a waffle iron. Serve with butter and Wilted Greens or Honey.'
-		],
-		recipeYield: '6 waffles',
-		rating: 4
+		]
 	},
 	{
 		author: 'Shane Thompson',
@@ -278,6 +268,7 @@ const recipes = [
 		recipeYield: '12 servings',
 		rating: 4
 	}
+
 ]
 
 export default recipes

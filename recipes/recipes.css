@@ -6,7 +6,7 @@
   --text-dark: #333;
   --text-light: #ebebeb;
   --primary-font: Arial, Helvetica, sans-serif;
-  --secondary-font: 'Courgette', 'cursive';
+  --secondary-font: 'Courgette', cursive;
   --line-color: #ccc;
 }
 
@@ -58,67 +58,74 @@ form input[type="text"] {
 }
 
 form button {
-  background-color: var(--secondary-color);
-  color: var(--text-light);
+  background-color: gainsboro;
   border: none;
-  padding: 5px 10px;
-  border-radius: 3px;
   cursor: pointer;
+  padding: 5px;
 }
 
-section {
+main {
   background-color: #ffffff;
   padding: 20px;
   margin: 20px;
   border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--line-color);
+}
+
+.recipe {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  border: 2px solid #000000; /* Added black border */
 }
 
-section .image {
+.recipe img {
   flex: 1;
   margin-right: 20px;
+  max-width: 50%;
 }
 
-section .details {
-  flex: 2;
+.recipe figcaption {
+  flex: 1;
 }
 
-section .tags {
-  display: flex;
-  justify-content: flex-start;
-  margin-bottom: 20px;
+.recipe__tags {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 0 10px 0;
+  padding-bottom: 30px;
 }
 
-section .tags span {
-  background-color: #ffffff;
+.recipe__tags li {
+  display: inline-block;
+  background-color: #f0f0f0;
   color: var(--text-dark);
-  padding: 5px 10px;
-  border-radius: 0;
-  font-size: 0.9em;
-  border: 1px solid var(--text-dark);
+  padding: 2px 8px;
+  margin-right: 5px;
+  border-radius: 2px;
+  font-size: 0.8em;
 }
 
-section h2 {
+.recipe h2 {
   font-family: var(--secondary-font);
-  margin-top: 0;
+  margin: 10px 0;
+  font-size: 40px;
+  color: var(--primary-color);
+}
+
+.recipe__ratings {
   margin-bottom: 10px;
-  text-align: left;
-  color: #4a90e2;
 }
 
-section .rating {
+.icon-star, .icon-star-empty {
   color: #ffd700;
-  font-size: 24px;
+  font-size: 18px;
 }
 
-section p {
-  margin-top: 30px;
-  font-size: 1.2em; /* Changed from 30px to 1.2em for better scaling */
+.recipe__description {
+  font-size: 14px;
   line-height: 1.4;
+  color: #666;
 }
 
 footer {
@@ -145,13 +152,14 @@ footer img {
 }
 
 @media (max-width: 768px) {
-  section {
+  .recipe {
     flex-direction: column;
   }
 
-  section .image {
+  .recipe img {
     margin-right: 0;
     margin-bottom: 20px;
+    max-width: 100%;
   }
 
   footer {
@@ -169,25 +177,6 @@ footer img {
 }
 
 @media (min-width: 768px) {
-  section {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-
-  section .details {
-    flex: 1;
-    padding-right: 20px;
-  }
-
-  section .image {
-    flex: 1;
-  }
-
-  section .tags {
-    justify-content: flex-start;
-  }
-
   footer {
     flex-direction: row;
     justify-content: space-between;
@@ -209,5 +198,4 @@ footer img {
     height: 20px;
     margin: 0 2px;
   }
-  
 }

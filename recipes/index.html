@@ -17,41 +17,21 @@
         <img src="images/images/recipe-book.png" alt="Recipe Book Logo">
         <h1>RecipeBook</h1>
     </header>
+    <form>
+        <input type="text" placeholder="Find a recipe">
+        <button type="submit">&#x1F50D;</button>
+    </form>
     <main>
-        <form>
-            <input type="text" placeholder="Find a recipe">
-            <button type="submit">&#x1F50D;</button>
-        </form>
-        <section>
-            <div class="image">
-                <img src="images/images/apple-crisp.jpg" alt="Apple Crisp">
-            </div>
-            <div class="details">
-                <div class="tags">
-                    <span>dessert</span>
-                </div>
-                <h2>Apple Crisp</h2>
-                <span class="rating" role="img" aria-label="Rating: 5 out of 5 stars">
-                    <span aria-hidden="true" class="icon-star">⭐</span>
-                    <span aria-hidden="true" class="icon-star">⭐</span>
-                    <span aria-hidden="true" class="icon-star">⭐</span>
-                    <span aria-hidden="true" class="icon-star-empty">⭐</span>
-                    <span aria-hidden="true" class="icon-star-empty">☆</span>
-                </span>
-                <p>This apple crisp recipe is a simple yet delicious fall dessert that's great served warm with vanilla ice cream.</p>
-            </div>
-        </section>
+        <div id="recipe-container"></div>
     </main>
     <footer>
         <div class="social">
-            <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates  -->
             <a href="#"><img src="images/images/instagram_icon.svg" alt="Instagram Icon"></a>
             <a href="#"><img src="images/images/youtube_icon.svg" alt="Pinterest Icon"></a>
             <a href="#"><img src="images/images/pinterest_icon.svg" alt="YouTube Icon"></a>
         </div>
         <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">Recipe icons created by Freepik - Flaticon</a>
     </footer>
-    <script type="module" src="recipes.mjs"></script>
-    <script src="main.js"></script>
+    <script src="main.js" type="module"></script>
 </body>
 </html>
