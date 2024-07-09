@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Ga+Maamli&display=swap');
+
+:root {
+  --primary-color: #3A9465;
+  --secondary-color: #F5F5DC;
+  --accent1-color: #FFFFFF;
+  --accent2-color: #2C5F2D;
+  --heading-font: 'Ga Maamli', serif;
+  --paragraph-font: Georgia, Helvetica, sans-serif;
+}
+
+body {
+    font-family: var(--paragraph-font);
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondary-color);
+    color: #333;
+}
+
+#main-content {
+    max-width: 95%;
+    margin: 30px auto;
+    display: flex;
+}
+
+header {
+    background-color: var(--primary-color);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 15px 0;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    height: 90px;
+    margin-right: 15px;
+}
+
+header h1 {
+    font-family: var(--heading-font);
+    font-size: 36px;
+    color: var(--accent1-color);
+    margin: 0;
+    font-weight: bold;
+}
+
+#logo {
+  height: 50px;
+  margin-right: 20px;
+}
+
+#sidebar {
+  width: 20%;
+  padding: 20px;
+  background-color: var(--accent1-color);
+}
+
+#sidebar h2 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+}
+
+#sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#sidebar ul li {
+  margin-bottom: 10px;
+}
+
+#sidebar ul li a {
+  text-decoration: none;
+  color: var(--accent2-color);
+}
+
+#mbti-introductions {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.mbti-type {
+  background-color: var(--accent1-color);
+  color: var(--primary-color);
+  padding: 20px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  text-align: center;
+  font-family: var(--heading-font);
+}
+
+.mbti-type:hover {
+  background-color: var(--accent2-color);
+  color: var(--accent1-color);
+}
+
+#mbti-details {
+    padding: 20px;
+    background-color: var(--accent1-color);
+    color: var(--primary-color);
+    display: none;
+    max-width: 45%; /* Set maximum width to 50% of the screen */
+    margin: 20px auto; /* Center the box horizontally */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    max-height: 80vh; /* Set maximum height to 80% of viewport height */
+    overflow-y: auto; /* Add scrollbar if content exceeds height */
+  }
+#mbti-details img {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
+@media (max-width: 768px) {
+    header {
+      padding: 10px 0;
+    }
+  
+    header h1 {
+      font-size: 20px;
+    }
+  
+    nav {
+      padding: 5px 0;
+    }
+  
+    #main-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    #sidebar, #mbti-introductions, #mbti-details {
+      width: 100%;
+      max-width: 90%;
+    }
+  
+    .mbti-type {
+      width: 45%;
+      margin: 5px;
+    }
+  }

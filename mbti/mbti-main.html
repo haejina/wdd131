@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MBTI Website</title>
+  <link rel="stylesheet" href="mbti-main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Ga+Maamli&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="wdd_logo.png" alt="Recipe Book Icon" class="logo">
+            <h1>Myers–Briggs Type Indicator</h1>
+        </div>
+    </header>
+  <div id="main-content">
+    <aside id="sidebar">
+      <h2>Articles</h2>
+      <ul>
+        <li><a href="https://www.16personalities.com/free-personality-test/accessible" id="mbti-test-link">Take the MBTI Test</a></li>
+        <li><a href="https://knowledge.wharton.upenn.edu/podcast/knowledge-at-wharton-podcast/does-the-myers-briggs-test-really-work/">The Science Behind Myers-Briggs(MBTI)</a></li>
+        <li><a href="article2.html">Article 2</a></li>
+        <li><a href="article3.html">Article 3</a></li>
+      </ul>
+    </aside>
+    <section id="mbti-introductions">
+      <div class="mbti-type" onclick="showMbtiDetails('INTJ')">INTJ</div>
+      <div class="mbti-type" onclick="showMbtiDetails('INTP')">INTP</div>
+      <div class="mbti-type" onclick="showMbtiDetails('ENTJ')">ENTJ</div>
+      <div class="mbti-type" onclick="showMbtiDetails('ENTP')">ENTP</div>
+      <div class="mbti-type" onclick="showMbtiDetails('INFJ')">INFJ</div>
+      <div class="mbti-type" onclick="showMbtiDetails('INFP')">INFP</div>
+      <div class="mbti-type" onclick="showMbtiDetails('ENFJ')">ENFJ</div>
+      <div class="mbti-type" onclick="showMbtiDetails('ENFP')">ENFP</div>
+      <div class="mbti-type" onclick="showMbtiDetails('ISTJ')">ISTJ</div>
+      <div class="mbti-type" onclick="showMbtiDetails('ISFJ')">ISFJ</div>
+      <div class="mbti-type" onclick="showMbtiDetails('ESTJ')">ESTJ</div>
+      <div class="mbti-type" onclick="showMbtiDetails('ESFJ')">ESFJ</div>
+      <div class="mbti-type" onclick="showMbtiDetails('ISTP')">ISTP</div>
+      <div class="mbti-type" onclick="showMbtiDetails('ISFP')">ISFP</div>
+      <div class="mbti-type" onclick="showMbtiDetails('ESTP')">ESTP</div>
+      <div class="mbti-type" onclick="showMbtiDetails('ESFP')">ESFP</div>
+    </section>
+    <section id="mbti-details">
+      <!-- MBTI details will be displayed here -->
+    </section>
+  </div>
+  <script src="mbti-main.js"></script>
+</body>
+</html>
