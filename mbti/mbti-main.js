@@ -1,4 +1,5 @@
-const mbtiDetails = {
+document.addEventListener("DOMContentLoaded", () => {
+  const mbtiData = {
     INTJ: {
       title: "INTJ: The Architect",
       description: "Imaginative and strategic thinkers, with a plan for everything.",
@@ -96,23 +97,29 @@ const mbtiDetails = {
       moreInfo: "ESFPs are fun-loving and enthusiastic. They enjoy being the center of attention and are always up for a good time."
     }
   };
-  
-  function showMbtiDetails(type) {
-    const detailsSection = document.getElementById('mbti-details');
-    const details = mbtiDetails[type];
-  
-    // Toggle display of details section
-    if (detailsSection.style.display === 'block' && detailsSection.getAttribute('data-type') === type) {
-      detailsSection.style.display = 'none';
-      detailsSection.removeAttribute('data-type');
-    } else {
-      detailsSection.innerHTML = `
-        <h2>${details.title}</h2>
-        <img src="${details.image}" alt="${type}">
-        <p>${details.description}</p>
-        <p>${details.moreInfo}</p>
-      `;
-      detailsSection.style.display = 'block';
-      detailsSection.setAttribute('data-type', type);
-    }
+
+  const mbtiGrid = document.querySelector(".mbti-grid");
+  const mbtiDetails = document.getElementById("mbti-details");
+
+  Object.keys(mbtiData).forEach(type => {
+    const mbtiTypeElement = document.createElement("div");
+    mbtiTypeElement.className = "mbti-type";
+    mbtiTypeElement.textContent = mbtiData[type].title;
+
+    mbtiTypeElement.addEventListener("click", () => {
+      displayDetails(mbtiData[type]);
+    });
+
+    mbtiGrid.appendChild(mbtiTypeElement);
+  });
+
+  function displayDetails(type) {
+    mbtiDetails.innerHTML = `
+      <h2>${type.title}</h2>
+      <p>${type.description}</p>
+      <img src="${type.image}" alt="${type.title}">
+      <p>${type.moreInfo}</p>
+    `;
+    mbtiDetails.style.display = "block";
   }
+});

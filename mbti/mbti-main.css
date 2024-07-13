@@ -9,79 +9,88 @@
   --paragraph-font: Georgia, Helvetica, sans-serif;
 }
 
-body {
-    font-family: var(--paragraph-font);
-    margin: 0;
-    padding: 0;
-    background-color: var(--secondary-color);
-    color: #333;
+body, html {
+  height: 100%;
+  margin: 0;
 }
 
-#main-content {
-    max-width: 95%;
-    margin: 30px auto;
-    display: flex;
+body {
+  font-family: var(--paragraph-font);
+  background-color: var(--secondary-color);
+  color: #333;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 header {
-    background-color: var(--primary-color);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    padding: 15px 0;
-}
-
-.header-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.logo {
-    height: 90px;
-    margin-right: 15px;
+  background-color: var(--primary-color);
+  padding: 15px;
+  text-align: center;
 }
 
 header h1 {
-    font-family: var(--heading-font);
-    font-size: 36px;
-    color: var(--accent1-color);
-    margin: 0;
-    font-weight: bold;
-}
-
-#logo {
-  height: 50px;
-  margin-right: 20px;
-}
-
-#sidebar {
-  width: 20%;
-  padding: 20px;
-  background-color: var(--accent1-color);
-}
-
-#sidebar h2 {
   font-family: var(--heading-font);
-  color: var(--primary-color);
+  font-size: 36px;
+  color: var(--accent1-color);
+  margin: 0;
 }
 
-#sidebar ul {
-  list-style-type: none;
+.main-nav {
+  list-style: none;
   padding: 0;
+  display: flex;
+  justify-content: center;
 }
 
-#sidebar ul li {
-  margin-bottom: 10px;
+.main-nav li {
+  margin: 0 10px;
 }
 
-#sidebar ul li a {
+.main-nav a {
+  color: var(--accent1-color);
   text-decoration: none;
-  color: var(--accent2-color);
+  font-family: var(--heading-font);
 }
 
-#mbti-introductions {
+.main-nav a:hover {
+  text-decoration: underline;
+}
+
+#maincontent {
+  max-width: 95%;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   flex-grow: 1;
+}
+
+#mbti-test {
+  text-align: center;
+  margin: 20px 0;
+}
+
+#mbti-test h2 a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-family: var(--heading-font);
+}
+
+#mbti-test h2 a:hover {
+  text-decoration: underline;
+}
+
+.mbti-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  width: 100%;
   padding: 20px;
 }
 
@@ -89,10 +98,11 @@ header h1 {
   background-color: var(--accent1-color);
   color: var(--primary-color);
   padding: 20px;
-  margin-bottom: 10px;
   cursor: pointer;
   text-align: center;
   font-family: var(--heading-font);
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .mbti-type:hover {
@@ -101,47 +111,41 @@ header h1 {
 }
 
 #mbti-details {
-    padding: 20px;
-    background-color: var(--accent1-color);
-    color: var(--primary-color);
-    display: none;
-    max-width: 45%; /* Set maximum width to 50% of the screen */
-    margin: 20px auto; /* Center the box horizontally */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
-    max-height: 80vh; /* Set maximum height to 80% of viewport height */
-    overflow-y: auto; /* Add scrollbar if content exceeds height */
-  }
-#mbti-details img {
-    max-width: 100%;
-    height: auto;
-    margin: 20px 0;
+  padding: 20px;
+  background-color: var(--accent1-color);
+  color: var(--primary-color);
+  display: none;
+  max-width: 45%;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-height: 80vh;
+  overflow-y: auto;
 }
+
+#mbti-details img {
+  max-width: 100%;
+  height: auto;
+  margin: 20px 0;
+}
+
+footer {
+  background-color: var(--primary-color);
+  padding: 10px;
+  text-align: center;
+  color: var(--accent1-color);
+  font-family: var(--heading-font);
+  width: 100%;
+}
+
 @media (max-width: 768px) {
-    header {
-      padding: 10px 0;
-    }
-  
-    header h1 {
-      font-size: 20px;
-    }
-  
-    nav {
-      padding: 5px 0;
-    }
-  
-    #main-content {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    #sidebar, #mbti-introductions, #mbti-details {
-      width: 100%;
-      max-width: 90%;
-    }
-  
-    .mbti-type {
-      width: 45%;
-      margin: 5px;
-    }
+  .mbti-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
+}
+
+@media (max-width: 480px) {
+  .mbti-grid {
+    grid-template-columns: 1fr;
+  }
+}
