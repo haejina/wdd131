@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // MBTI data object
   const mbtiData = {
     INTJ: {
       title: "INTJ: The Architect",
@@ -98,9 +99,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
+  // DOM elements
   const mbtiGrid = document.querySelector(".mbti-grid");
   const mbtiDetails = document.getElementById("mbti-details");
 
+  // Populate MBTI grid
   Object.keys(mbtiData).forEach(type => {
     const mbtiTypeElement = document.createElement("div");
     mbtiTypeElement.className = "mbti-type";
@@ -113,6 +116,7 @@ document.addEventListener("DOMContentLoaded", () => {
     mbtiGrid.appendChild(mbtiTypeElement);
   });
 
+  // Display details function
   function displayDetails(type) {
     mbtiDetails.innerHTML = `
       <h2>${type.title}</h2>

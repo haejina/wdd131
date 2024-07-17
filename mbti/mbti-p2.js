@@ -121,15 +121,15 @@ const mbtiSearchInput = document.getElementById('mbti-search-input');
 function showMbtiDetails(mbtiType) {
     const { title, description, image, moreInfo, recommendedJob } = mbtiData[mbtiType];
     mbtiDetails.innerHTML = `
-    <div class="mbti-tags">
-        <span class="mbti-tag">${mbtiType}</span>
-    </div>
-    <h2>${title}</h2>
-    <img src="${image}" alt="${mbtiType} Image">
-    <p>${description}</p>
-    <p>${moreInfo}</p>
-    <p><strong>Recommended Jobs:</strong> ${recommendedJob}</p>
-`;
+        <div class="mbti-tags">
+            <span class="mbti-tag">${mbtiType}</span>
+        </div>
+        <h2>${title}</h2>
+        <img src="${image}" alt="${mbtiType} Image">
+        <p>${description}</p>
+        <p>${moreInfo}</p>
+        <p><strong>Recommended Jobs:</strong> ${recommendedJob}</p>
+    `;
 }
 
 // Event listener for MBTI search form

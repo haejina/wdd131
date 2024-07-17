@@ -1,5 +1,7 @@
+/* Importing Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Ga+Maamli&display=swap');
 
+/* CSS Variables */
 :root {
   --primary-color: #3A9465;
   --secondary-color: #F5F5DC;
@@ -9,6 +11,7 @@
   --paragraph-font: Georgia, Helvetica, sans-serif;
 }
 
+/* Global Styles */
 body, html {
   height: 100%;
   margin: 0;
@@ -28,6 +31,7 @@ body {
   min-height: 100vh;
 }
 
+/* Header Styles */
 header {
   background-color: var(--primary-color);
   padding: 15px;
@@ -39,6 +43,11 @@ header h1 {
   font-size: 36px;
   color: var(--accent1-color);
   margin: 0;
+}
+
+img.logo {
+  width: 50px; /* Adjust the width */
+  height: auto; /* Maintain aspect ratio; adjust if needed */
 }
 
 .main-nav {
@@ -62,6 +71,7 @@ header h1 {
   text-decoration: underline;
 }
 
+/* Main Content Styles */
 #maincontent {
   max-width: 95%;
   margin: 30px auto;
@@ -129,6 +139,7 @@ header h1 {
   margin: 20px 0;
 }
 
+/* Footer Styles */
 footer {
   background-color: var(--primary-color);
   padding: 10px;
@@ -138,6 +149,7 @@ footer {
   width: 100%;
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
   .mbti-grid {
     grid-template-columns: repeat(2, 1fr);
